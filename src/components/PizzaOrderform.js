@@ -1,5 +1,11 @@
 import React, { useState,  useEffect } from "react";
 
+const prices = {
+    size: { Small: 100, Medium: 150, Large: 200 },
+    toppings: { Cheese: 20, Paneer: 30, Olives: 25 },
+    sides: { Coke: 40, Dip: 25 },
+  };
+
 const PizzaOrderform = () => {
   const [order, setOrder] = useState({
     size: "Small",
@@ -9,11 +15,7 @@ const PizzaOrderform = () => {
     quantity: 1,
   });
 
-  const prices = {
-    size: { Small: 100, Medium: 150, Large: 200 },
-    toppings: { Cheese: 20, Paneer: 30, Olives: 25 },
-    sides: { Coke: 40, Dip: 25 },
-  };
+  
 
   const [total, setTotal] = useState(0);
 
